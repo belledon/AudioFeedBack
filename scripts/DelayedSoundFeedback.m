@@ -543,8 +543,8 @@ tout(2:4,:) = tstats(2:4,idx);
 tstats = tout;
 
 % Plot it:
-plot(tstats(1,:), tstats(2,:) * 1000, '.', tstats(1,:), tstats(3,:) * 1000, '-', tstats(1,:), tstats(4,:) * 1000, '-');
+% plot(tstats(1,:), tstats(2,:) * 1000, '.', tstats(1,:), tstats(3,:) * 1000, '-', tstats(1,:), tstats(4,:) * 1000, '-');
 
 % Done.
-fprintf('Demo finished, bye!\n');
+% fprintf('Demo finished, bye!\n');
 end
