@@ -39,8 +39,8 @@ try
     %% Experiment settings
     rand('seed', sum(100*clock));
     dir  = cd;
-    dataDir = strrep(cd, 'ptb_scripts','ptb_data');
-    typeDir = dataDir; stimDir = dataDir; interDir = dataDir; audioDir = dataDir; msgDir = dataDir;
+    dataDir = strrep(cd, 'stutter_scripts','stutter_data');
+    msgDir = dataDir;
     
     
     stimfrmt = '%s\t%d\t%d\t%d';
@@ -63,7 +63,7 @@ try
     
     %% Get stimuli
     
-    stimFile = fopen(fullfile(typeDir, 'stims.txt'), 'r');
+    stimFile = fopen(fullfile(dataDir, 'stims.txt'), 'r');
     stims = textscan(stimFile, '%s\t%d\t%d\t%d');
     fclose(stimFile);
     numStims = size(stims,1);
