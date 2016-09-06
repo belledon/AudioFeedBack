@@ -39,7 +39,7 @@ try
     %% Experiment settings
     rand('seed', sum(100*clock));
     dir  = cd;
-    dataDir = strrep(cd, 'stutter_scripts','stutter_data');
+    dataDir = strrep(cd, 'scripts','data');
     msgDir = dataDir;
     
     
