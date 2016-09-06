@@ -88,6 +88,8 @@ function [audio] = DelayedSoundFeedback(reqlatency, duplex, freq, minLatency)
 % 08/02/2009 Add support for 'DirectInputMonitoring' for reqLatency=0 (MK)
 % 04/03/2011 Disable dynamic adaptation of captureQuantum. It causes
 %            artifacts at some feedback delay settings. (MK)
+% 09/06/2016 Small edits to record audio and time stamps (MB)
+
 
 % Level of debug output:
 verbose = 1;
@@ -543,8 +545,8 @@ tout(2:4,:) = tstats(2:4,idx);
 tstats = tout;
 
 % Plot it:
-% plot(tstats(1,:), tstats(2,:) * 1000, '.', tstats(1,:), tstats(3,:) * 1000, '-', tstats(1,:), tstats(4,:) * 1000, '-');
+%plot(tstats(1,:), tstats(2,:) * 1000, '.', tstats(1,:), tstats(3,:) * 1000, '-', tstats(1,:), tstats(4,:) * 1000, '-');
 
 % Done.
-% fprintf('Demo finished, bye!\n');
+fprintf('Demo finished, bye!\n');
 end
